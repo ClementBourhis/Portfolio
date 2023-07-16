@@ -10,7 +10,8 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
+      "@fonts/*": ["src/assets/fonts/*"],
     },
   }
 }
