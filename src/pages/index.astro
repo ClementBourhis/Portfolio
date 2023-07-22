@@ -1,9 +1,23 @@
 ---
 //Importation des dépendences du site
-import Header from '../layouts/Header.astro'
+import Header from '@layouts/Header.astro';
+import Navigateur from '@components/Navigateur.astro'
+import Home from '@components/home/home.astro';
 ---
 
 <!-- HTML -->
-<html lang="en">
+<html lang="fr">
     <Header title="Portfolio"/>
+    <Navigateur />
+    <Home />
+    <p class="txt">Hello World</p>
+    <div class="test">
+
+    </div>
 </html>
+
+<style>
+    .test{
+        height: 100vh;
+    }
+</style>

@@ -12,7 +12,7 @@
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@fonts/*": ["src/assets/fonts/*"],
-      "@icons/*": ["src/assets/icons/*",]
+      "@icons/*": ["src/assets/icons/*"],
     },
   }
 }

@@ -1,0 +1,83 @@
+<div id="home">
+    <div class="home-content">
+        <img alt="picture here"/>
+        <div class="home-title">
+            <h1>Ingénieur créatif Multimédia <br>Clément Bourhis</h1>
+            <div class="home-buttons">
+                <button>Me contacter</button>
+                <button class="home-cvbutton">Télécharger mon cv</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 70px);
+    }
+
+    .home-content{
+        display: grid;
+        grid-template-columns: 280px 710px;
+        grid-gap: 10px;
+    }
+
+    .home-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home-title h1{
+        margin: 10px 0 10px 0;
+        font-family: 'Poppins Bold';
+        font-size: 48px;
+    }
+
+    .home-buttons{
+        display: flex;
+    }
+
+    .home-buttons button{
+        cursor: pointer;
+        border: inherit;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins Regular';
+        font-size: 16px;
+        color: white;
+        width: 190px;
+        height: 55px;
+        border-radius: 35px;
+        background-color: rgba(124, 124, 124, 1);
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+
+    .home-buttons button::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        padding: 1px;
+        border-radius: 35px;
+        background: linear-gradient(135deg, rgb(255, 255, 255) 20%, rgb(192, 240, 255) 35%, rgba(245,111,232,0) 60%);
+        --grad: linear-gradient(red, red);
+        -webkit-mask: var(--grad) content-box, var(--grad);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+    }
+
+    .home-cvbutton{
+        color: black;
+        margin-left: 50px;
+        background: linear-gradient(151deg, #6993FF 0%, #ff36f5 90%);
+    }
+
+    .home-buttons button:hover, .home-cvbutton:hover{
+        background-color: rgb(255, 255, 255);
+    }
+</style>
