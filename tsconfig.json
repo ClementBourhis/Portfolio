@@ -3,6 +3,7 @@
   "compilerOptions": {
     //React options
     "jsx": "react-jsx",
+    "verbatimModuleSyntax": true, //TypeScript will check your imports and tell you when import type should be used.
     "jsxImportSource": "react",
 
     //Aliases
