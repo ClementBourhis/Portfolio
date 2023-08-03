@@ -1,13 +1,12 @@
 ---
-import DiscordLogo from "@icons/discord_logo.svg"
 import CBPP from "@icons/cb_pp.jpg"
 
 import MenuButton from "./MenuButton.astro";
 ---
 
 <div id="navigateur">
-    <div id="navigateur_c1"><img src={DiscordLogo}/></div>
-    <div id="navigateur_c2"><a href="/"><img src={CBPP}/></a></div>
+    <div id="navigateur_c1"><a href="/"><img src={CBPP}/></a></div>
+    <div id="navigateur_c2"><!--<a href="/"><img src={CBPP}/></a>--></div>
     <nav  id="navigateur_c3">
         <ul class="nav-menu">
             <li><a href="/about">À propos</a></li>
@@ -44,7 +43,7 @@ import MenuButton from "./MenuButton.astro";
         justify-content: center;
     }
 
-    #navigateur_c2 img{
+    #navigateur_c1 img{
         border-radius:50%;
         width:42px;
         padding: 4px;
