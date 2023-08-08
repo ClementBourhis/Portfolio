@@ -1,0 +1,70 @@
+---
+import SAImg from '@images/short_about_image.svg';
+const backgroundImage = `url(${SAImg})`;
+---
+
+<div id="short_about">
+    <div class="short_about_content">
+        <img src={SAImg}/>
+        <p>Tout droit sortit de la formation d’ingénieur IMAC, j’ai développé de nombreuses compétences en multimédia comme la programmation, le graphisme, l’audiovisuel et bien d’autre !
+
+        <br><br> Passionné par les sciences et l’art, j’associe dans mes projets ces deux mondes pour vous proposer mon univers.</p>
+    </div>
+</div>
+
+<style>
+    #short_about {
+        height: 100vh;
+        width: 100vw;
+        max-width: 1920px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .short_about_content {
+        position: relative;
+        max-width: 80%;
+        min-width: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .short_about_content img{
+        max-height: 100vh;
+        max-width: 100%;
+        pointer-events: none;
+    }
+
+    .short_about_content p{
+        max-width: 316px;
+        width: 18vw;
+        transform: translate(70px, -85px);
+        position: absolute;
+    }
+
+    @media screen and (max-width: 1460px){
+        .short_about_content p{
+            width: 20vw;
+            transform: translate(40px, -85px);
+        }
+    }
+
+    @media screen and (max-width: 1200px){
+        .short_about_content p{
+            font-size: 14px;
+            transform: translate(25px, -55px);
+        }
+    }
+
+    @media screen and (max-width: 1200px){
+        .short_about_content p{
+            font-size: 12px;
+            transform: translate(20px, -55px);
+            width: 200px;
+        }
+    }
+</style>
