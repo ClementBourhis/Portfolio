@@ -1,0 +1,49 @@
+---
+import QuestionCrystal from '@icons/question_crystal.svg'
+
+interface Props {
+    image?: string;
+    titre?: String;
+    backgroundColor?: String;
+}
+
+const { image=QuestionCrystal, titre='Titre' , backgroundColor='rgba(250, 250, 250, 0.25)' } = Astro.props;
+---
+
+<div class="carroussel-image" style={`background-color: ${backgroundColor}`}>
+    <img src={image}/>
+    <p>{titre}</p>
+</div>
+
+<style>
+    .carroussel-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        width: 400px;
+        aspect-ratio: 8/6;
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    p {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 15%;
+        font-family: 'Poppins Bold';
+    }
+</style>
