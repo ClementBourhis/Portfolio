@@ -1,0 +1,26 @@
+---
+import CarrousselImage from "./carrousselImage.astro";
+---
+
+<div class="carroussel">
+    <CarrousselImage titre="Hello"/>
+    <CarrousselImage className="image-hilight" backgroundColor={'rgba(181, 249, 253, 0.4)'} titre="Hello"/>
+    <CarrousselImage titre="Hello"/>
+</div>
+
+<style>
+    .carroussel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        overflow: hidden;
+        padding: 5% 0 5% 0;
+        width: 100%;
+    }
+
+    .image-hilight {
+        transform: scale(1.2);
+        z-index: 2;
+    }
+</style>
