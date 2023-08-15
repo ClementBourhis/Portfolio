@@ -1,0 +1,29 @@
+{
+    "projects": [
+      {
+        "title": "2Gether Parallax",
+        "description": "Parallaxe réalisé pour le site de 2Gether",
+        "image": "/src/assets/projects/2gether_parallax/parallax.svg",
+        "miniature": "/src/assets/projects/2gether_parallax/parallax.svg",
+        "tags": ["Graphic Design", "Frontend"],
+        "date": "2023-08-14"
+      },
+      {
+        "title": "Le Juno Bar",
+        "description": "Création de la charte graphique du bar Le Juno à Montpellier",
+        "image": "src/assets/projects/Le_Juno_Bar/sticker_bleu.png",
+        "miniature": "src/assets/projects/Le_Juno_Bar/sticker_bleu.png",
+        "tags": ["Graphic Design", "Image de marque"],
+        "date": "2022-10-15"
+      },
+      {
+        "title": "Libize",
+        "description": "Réalisation de la communcation de Libize",
+        "image": "src/assets/projects/Libize/libize-logo.svg",
+        "miniature": "src/assets/projects/Libize/libize-logo.svg",
+        "tags": ["Web Design", "Graphic Design"],
+        "date": "2023-08-06"
+      }
+    ]
+  }
+  
