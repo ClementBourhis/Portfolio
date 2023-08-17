@@ -5,6 +5,9 @@ export interface Props {
 }
 
 const { title = "Default Title" } = Astro.props;
+
+//background
+import Background from '@images/background.svg'
 ---
 
 <head>
@@ -16,7 +19,6 @@ const { title = "Default Title" } = Astro.props;
 	<title>{title}</title>
 </head>
 
-<!-- Définition du CSS global -->
 <style is:global>
 	/* Déclaration des fonts */
 	@font-face {
@@ -38,8 +40,12 @@ const { title = "Default Title" } = Astro.props;
 	html {
 		font-family: 'Poppins Regular';
 		color: white;
-		background: var(--background-gradient, linear-gradient(180deg, #0F103F 3.13%, #1A45DF 45.31%, #8161DE 98.96%));
+		background: linear-gradient(180deg, #0F103F 3.13%, #1A45DF 45.31%, #8161DE 98.96%);
 		min-height: 100vh;
+	}
+
+	body{
+		background: center no-repeat url('src/assets/images/background.svg');
 	}
 
 	body, p, h1, h2, h3, ul {
