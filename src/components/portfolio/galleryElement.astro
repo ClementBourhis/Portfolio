@@ -1,0 +1,92 @@
+---
+import Image from '@images/short_about_image.svg';
+import HoverOverlay from '@images/hover_gallery_element.svg'
+
+interface Props {
+    project: {
+    title: string;
+    description: string;
+    image: string;
+    miniature: string;
+    tags: string[];
+    date: string;
+    };
+}
+
+const {project} = Astro.props;
+---
+
+
+<div class="gallery-element">
+    <img class="miniature" src={project.miniature}/>
+    <div class="hover">
+        <img class="hover_overlay" src={HoverOverlay}/>
+        <h4 class="titre">{project.title}</h4>
+        <ul class="tags">
+            {project.tags.map((tag) => (
+                <li>{tag}</li>
+            ))}
+        </ul>
+    </div>
+</div>
+
+<style>
+    .gallery-element {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: rgb(36, 36, 36);
+        aspect-ratio: 1/1;
+    }
+
+    .miniature {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .hover {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .hover:hover {
+        opacity: 1;
+    }
+
+    .hover_overlay {
+        width: 100%;
+        height: 100%;
+    }
+
+    .titre {
+        color: #9D51C0;
+        font-family: 'Poppins Bold';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        text-align: end;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .tags {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .tags li {
+        padding: 2px;
+        background: #9D51C0;
+        margin: 2px;
+        border-radius: 3px;
+        text-align: center;
+        width: fit-content;
+    }
+
+</style>
