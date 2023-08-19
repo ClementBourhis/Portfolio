@@ -1,0 +1,31 @@
+---
+import Header from "@layouts/Header.astro";
+import Navigateur from '@components/Navigateur.astro';
+import Footer from "@components/Footer.astro";
+
+import projectsData from "@projects/projects.json";
+
+export async function getStaticPaths() {
+    const projects = projectsData.projects;
+    var pathList: { params: { project: string }, props: { project: { title: string; description: string; image: string; miniature: string; tags: string[]; date: string; }} }[] = [];
+    for (var id = 0; id< projects.length; id++){
+        var path = {
+            params: {project: projects[id].title}, props: {projectData: projects[id]}
+        };
+        pathList.push(path);
+    }
+
+    return pathList;
+}
+
+const { project } = Astro.params;
+const { projectData } = Astro.props;
+---
+
+<html lang="fr">
+    <Header title={project}/>
+    <Navigateur />
+    <h2>{projectData.title}</h2>
+    <img src={projectData.image}>
+    <Footer />
+</html>
