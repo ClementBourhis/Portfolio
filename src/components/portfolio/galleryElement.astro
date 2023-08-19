@@ -17,7 +17,7 @@ const {project} = Astro.props;
 ---
 
 
-<div class="gallery-element">
+<a class="gallery-element" rel="prefetch" href={`${project.title}`}>
     <img class="miniature" src={project.miniature}/>
     <div class="hover">
         <img class="hover_overlay" src={HoverOverlay}/>
@@ -28,7 +28,7 @@ const {project} = Astro.props;
             ))}
         </ul>
     </div>
-</div>
+</a>
 
 <style>
     .gallery-element {
