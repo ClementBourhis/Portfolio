@@ -5,7 +5,8 @@
         "description": "Parallaxe réalisé pour le site de 2Gether",
         "image": "/src/assets/projects/2gether_parallax/parallax.svg",
         "miniature": "/src/assets/projects/2gether_parallax/parallax.svg",
-        "tags": ["Graphic Design", "Frontend"],
+        "skills": ["Graphic Design", "Frontend"],
+        "tools": ["Figma", "VSCode"],
         "date": "2023-08-14"
       },
       {
@@ -13,7 +14,8 @@
         "description": "Création de la charte graphique du bar Le Juno à Montpellier",
         "image": "src/assets/projects/Le_Juno_Bar/sticker_bleu.png",
         "miniature": "src/assets/projects/Le_Juno_Bar/sticker_bleu.png",
-        "tags": ["Graphic Design", "Image de marque"],
+        "skills": ["Graphic Design", "Image de marque"],
+        "tools": ["Illustrator"],
         "date": "2022-10-15"
       },
       {
@@ -21,7 +23,8 @@
         "description": "Réalisation de la communcation de Libize",
         "image": "src/assets/projects/Libize/libize-logo.svg",
         "miniature": "src/assets/projects/Libize/libize-logo.svg",
-        "tags": ["Web Design", "Graphic Design"],
+        "skills": ["Web Design", "Graphic Design"],
+        "tools": ["Illustrator", "Davinci Resolve"],
         "date": "2023-08-06"
       }
     ]

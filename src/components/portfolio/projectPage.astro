@@ -1,0 +1,157 @@
+---
+import BackIcon from "@icons/back_icon.svg"
+
+interface Props {
+    project: {
+    title: string;
+    description: string;
+    image: string;
+    miniature: string;
+    skills: string[];
+    tools: string[];
+    date: string;
+    };
+}
+
+const {project} = Astro.props;
+---
+
+<div class="project-page">
+    <div class="project">
+        <div class="title">
+            <button class="back" onclick="window.location.href='/portfolio';"><img src={BackIcon}></button>
+            <h1>{project.title}</h1>
+        </div>
+        <img src={project.image}/>
+        <div class="description">
+            <h2>Description</h2>
+            <p>{project.description}</p>
+        </div>
+        <div class="tags">
+            <div class="skills">
+                <h2>Compétences</h2>
+                <ul>{project.skills.map((skill) => (
+                    <li><p>{skill}</p></li>
+                ))}</ul>
+            </div>
+            <div class="tools">
+                <h2>Outils</h2>
+                <ul>{project.tools.map((tool) => (
+                    <li><p>{tool}</p></li>
+                ))}</ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .project-page{
+        width: 100vw;
+        max-width: 1920px;
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .project {
+        max-width: 100%;
+        padding: 100px;
+    }
+
+    .title {
+        position: relative;
+    }
+
+    button {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 5px;
+        left: -70px;
+    }
+
+    h1, h2 {
+        font-family: 'Poppins Bold';
+        margin: 20px 0 20px 0;
+        position: relative;
+    }
+
+    h1::after, h2::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(51, 178, 216) 5%, rgba(245,111,232,0) 70%);
+        transform-origin: bottom;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 70vh;
+    }
+
+    .description{
+        margin: 50px 0 50px 0;
+    }
+
+    .tags {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 50px;
+    }
+
+    .tools {
+        direction: rtl;
+    }
+
+    .tools h2::after {
+        background: linear-gradient(135deg, rgba(245,111,232,0) 30%, rgb(51, 178, 216) 95%, rgb(255, 255, 255) 100%);
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: max-content max-content max-content;
+        gap: 10px;
+    }
+    
+    .tags p {
+        width: fit-content;
+        padding: 4px;
+        background-color: #1EB1D2;
+        border-radius: 5px;
+    }
+
+    .tools ul {
+        direction: rtl;
+    }
+
+    .tools p {
+        background-color: #9D51C0;
+    }
+
+    @media screen and (max-width: 700px) {
+        .project {
+            padding: 10%;
+        }
+
+        button {
+            top: -50px;
+            left: 0;
+        }
+
+        h1, h2 {
+            font-size: smaller;
+        }
+
+        .skills {
+            margin-bottom: 30px;
+        }
+
+        .tags {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
