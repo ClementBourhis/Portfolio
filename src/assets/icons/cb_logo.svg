@@ -2,31 +2,16 @@
     <defs> 
         <style>
             .cls-1{
-                fill:url(#Dark_to_light);
+                fill:url(#Light_to_dark);
             }
             .cls-2{
-                fill:#141414;
+                fill:#ebebeb;
             }
             .cls-3{
                 fill:#1eb1d2;
             }
-
-            @media (prefers-color-scheme: dark) {
-                .cls-1 {
-                    fill:url(#Light_to_dark);
-                }
-
-                .cls-2 { 
-                    fill: #ebebeb; 
-                }
-            }
         </style>
         
-        <linearGradient id="Dark_to_light" x1="237.5" y1="425" x2="237.5" y2="75" gradientUnits="userSpaceOnUse">
-            <stop offset="0.2" stop-color="#fff"/>
-            <stop offset="0.8" stop-color="#141414"/>
-        </linearGradient>
-
         <linearGradient id="Light_to_dark" x1="312.5" y1="350" x2="312.5" gradientUnits="userSpaceOnUse">
             <stop offset="0.2"/>
             <stop offset="0.8" stop-color="#ebebeb"/>

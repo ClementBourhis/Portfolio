@@ -1,11 +1,11 @@
 ---
-import CBPP from "@icons/cb_pp.jpg"
+import CBLogo from "@icons/cb_logo.svg"
 
 import MenuButton from "./MenuButton.astro";
 ---
 
 <div id="navigateur">
-    <div id="navigateur_c1"><a href="/"><img src={CBPP}/></a></div>
+    <div id="navigateur_c1"><a href="/"><img src={CBLogo}/></a></div>
     <div id="navigateur_c2"><!--<a href="/"><img src={CBPP}/></a>--></div>
     <nav  id="navigateur_c3">
         <ul class="nav-menu">
@@ -34,7 +34,6 @@ import MenuButton from "./MenuButton.astro";
     #navigateur_c1{
         display: flex;
         align-items: center;
-        padding-left: 30px;
     }
 
     #navigateur_c2{
@@ -44,10 +43,7 @@ import MenuButton from "./MenuButton.astro";
     }
 
     #navigateur_c1 img{
-        border-radius:50%;
-        width:42px;
-        padding: 4px;
-        background-image: linear-gradient(135deg, rgba(68,150,247,1) 20%, rgba(178,111,245,1) 55%, rgba(245,111,232,0) 75%);
+        width:50px;
     }
 
     #navigateur_c2 img:is(:hover, :focus-within){
