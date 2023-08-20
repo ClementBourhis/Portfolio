@@ -13,7 +13,7 @@
         </style>
         
         <linearGradient id="Light_to_dark" x1="312.5" y1="350" x2="312.5" gradientUnits="userSpaceOnUse">
-            <stop offset="0.2"/>
+            <stop offset="0.2" stop-color="rgba(0,0,0,0)"/>
             <stop offset="0.8" stop-color="#ebebeb"/>
         </linearGradient>
     </defs>
