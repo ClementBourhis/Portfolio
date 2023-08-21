@@ -24,11 +24,20 @@ import Chronology from "./chronology.astro";
 
     h1 {
         text-align: center;
+        margin-bottom: 50px;
     }
 
     .infos {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 50px;
         height: 80%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .infos {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 </style>
