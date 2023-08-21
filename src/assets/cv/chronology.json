@@ -1,0 +1,24 @@
+{
+    "events": [
+        {
+            "date": "2023 - Situation actuel",
+            "name": "Graphiste bénévole pour l'association 2GETHER",
+            "image": "/src/assets/cv/images/2gether_logo.png"
+        },
+        {
+            "date": "2023 - 2020",
+            "name": "Formation au diplôme d'ingénieur IMAC",
+            "image": "/src/assets/cv/images/2gether_logo.png"
+        },
+        {
+            "date": "2018 - 2020",
+            "name": "Formation au diplôme de Réseaux & Télécommunications",
+            "image": "/src/assets/cv/images/2gether_logo.png"
+        },
+        {
+            "date": "2018",
+            "name": "Obtention du BAC Scientifique - SVT (avec mention bien)",
+            "image": "/src/assets/cv/images/2gether_logo.png"
+        }
+    ]
+}
