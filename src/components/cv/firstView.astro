@@ -1,0 +1,49 @@
+---
+import CBPP from "@icons/cb_pp.jpg"
+---
+
+<div id="first-view">
+    <h2>Clément Bourhis</h2>
+    <div class="bubble">
+        <img src={CBPP}/>
+        <p class="age">22 ans</p>
+        <p class="permis">Permis B</p>
+    </div>
+    <p>Ingénieur créatif Multimédia</p>
+</div>
+
+<style>
+    #first-view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h2 {
+        font-family: 'Poppins Bold';
+    }
+
+    .bubble {
+        position: relative;
+        margin: 50px;
+    }
+
+    img {
+        border-radius: 500px;
+        max-width: 200px;
+    }
+
+    .age {
+        position: absolute;
+        top: 20px;
+        left: -50px;
+    }
+
+    .permis {
+        position: absolute;
+        bottom: 20px;
+        right: -50px;
+    }
+
+</style>
