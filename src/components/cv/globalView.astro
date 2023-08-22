@@ -40,4 +40,11 @@ import Chronology from "./chronology.astro";
             flex-direction: column-reverse;
         }
     }
+
+    @media screen and (max-height: 650px) {
+        .infos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 </style>
