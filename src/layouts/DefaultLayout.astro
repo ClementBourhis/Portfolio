@@ -1,0 +1,90 @@
+---
+import Banner from '@components/Banner.astro';
+import Footer from '@components/FooterBanner.astro';
+
+//Props
+export interface Props {
+	title?: string;
+}
+
+const { title = "Clément Bourhis" } = Astro.props;
+---
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description">
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+
+    
+	<body>
+        <Banner />
+		<section id="content">
+			<slot />
+		</section>
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+
+	/* Déclaration des fonts */
+	@font-face {
+    font-family: 'Poppins Regular';
+    src: url('src/assets/fonts/poppins-regular-webfont.woff2') format('woff2'),
+         url('src/assets/fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  	}
+
+	@font-face {
+    font-family: 'Poppins Bold';
+    src: url('src/assets/fonts/poppins-bold-webfont.woff2') format('woff2'),
+         url('src/assets/fonts/poppins-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  	}
+
+	html {
+		font-family: 'Poppins Regular';
+		color: #EBEBEB;
+		background-color: #141414;
+	}
+
+	body{
+		position: relative;
+		min-height: 100vh;
+	}
+
+	body, p, h1, h2, h3, ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		color:white;
+		text-decoration: none;
+		transition: color 0.1s ease-in-out;
+	}
+
+	#content {
+		min-height: calc(100vh - 112px);
+		width: 100vw;
+	}
+
+	@media screen and (max-height: 500px) {
+		#content {
+			min-height: calc(100vh - 82px);
+			width: 100vw;
+		}
+	}
+</style>
+
