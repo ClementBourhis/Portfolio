@@ -1,0 +1,27 @@
+---
+interface Props {
+    className?: string;
+}
+
+const { className="" } = Astro.props;
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 73" class={className}>
+    <defs>
+        <style>
+            .cls-1{
+                fill:none;
+                stroke:#ebebeb;
+                stroke-linecap:round;
+                stroke-miterlimit:10;
+                stroke-width:3px;
+            }
+        </style>
+    </defs>
+    <title>Menu</title>
+    <g id="menu_burger" data-name="Menu Burger">
+        <line class="cls-1" x1="1.5" y1="1.5" x2="101.5" y2="1.5"/>
+        <line class="cls-1" x1="1.5" y1="36.5" x2="101.5" y2="36.5"/>
+        <line class="cls-1" x1="1.5" y1="71.5" x2="101.5" y2="71.5"/>
+    </g>
+</svg>

@@ -1,6 +1,6 @@
 ---
 import Header from "@layouts/Header.astro";
-import Navigateur from '@components/Navigateur.astro';
+import Banner from "@components/Banner.astro";
 import ProjectPage from "@components/portfolio/projectPage.astro";
 import Footer from "@components/Footer.astro";
 
@@ -25,7 +25,7 @@ const { projectData } = Astro.props;
 
 <html lang="fr">
     <Header title={project}/>
-    <Navigateur />
+    <Banner />
     <ProjectPage project={projectData}/>
     <Footer />
 </html>

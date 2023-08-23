@@ -1,0 +1,144 @@
+---
+import CBLogo from "@svg/CBLogo.astro";
+import BurgerMenu from "./svg/BurgerMenu.astro";
+---
+
+<section id="banner">
+    <nav>
+        <a href="/"><CBLogo className="cb_logo" title="Home"/></a>
+        <ul>
+            <li><a href="/about">À propos</a></li>
+            <li><a href="/cv">CV</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <BurgerMenu className="menu_burger"/>
+        </ul>
+    </nav>
+</section>
+
+<script>
+    const menuBurger = document.querySelector('.menu_burger');
+    const menu = document.querySelector('ul');
+    let MenuIsOpen = false;
+    
+    menuBurger?.addEventListener('click', () => {
+                MenuIsOpen ? menu?.classList.remove('menu_open') : menu?.classList.add('menu_open');
+                MenuIsOpen = !MenuIsOpen;
+    });
+</script>
+
+<style>
+    #banner {
+        width: 100vw;
+        height: 70px;
+        border-bottom: solid 1px #EBEBEB;
+    }
+
+    nav {
+        width: 100vw;
+        max-width: 1120px;
+        height: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cb_logo {
+        height: 45px;
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    li {
+        margin: 0 15px 0 15px;
+        position: relative;
+    }
+
+    li::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        background: white;
+        transform: scaleX(0);
+        transition: transform 0.1s cubic-bezier(.37,.04,.3,1.4);
+    }
+
+    li:hover::after {
+        transform: scaleX(1);
+    }
+
+    .menu_burger {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            cursor: pointer;
+    }
+
+    @media screen and (max-width: 500px) {
+        li {
+           display: none;
+        }
+
+        .menu_open{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #141414ce;
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            z-index: 9999;
+        }
+
+        .menu_open li{
+            margin: 5vh 0 5vh 0;
+            padding: 1vh;
+            width: 50vw;
+            height: 5vh;
+            border-radius: 30px;
+            border: #EBEBEB 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu_burger {
+            display: block;
+            height: 30px;
+        }
+    }
+
+    @media screen and (max-height: 500px) {
+        #banner {
+            height: 40px;
+        }
+
+        .cb_logo {
+            height: 30px;
+        }
+
+        .menu_burger {
+            height: 15px;
+            top: 12.5px;
+        }
+
+        .menu_open li {
+            border-radius: 0;
+            border: none;
+        }
+    }
+</style>

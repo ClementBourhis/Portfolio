@@ -1,0 +1,27 @@
+---
+interface Props {
+    className?: string;
+    title?: string;
+    black?: boolean;
+}
+
+const {className='', title="CB Logo", black = false} = Astro.props;
+const sColor = black ? '#141414' : '#ebebeb';
+const sColorOposite = black ? '#ebebeb' : '#141414';
+---
+
+<svg id="cb_logo" class={className} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350 425">
+    <defs>         
+        <linearGradient id="gradient" x1="237.5" y1="425" x2="237.5" y2="75" gradientUnits="userSpaceOnUse">
+            <stop offset="0.2" stop-color={sColorOposite}/>
+            <stop offset="0.8" stop-color={sColor}/>
+        </linearGradient>
+    </defs>
+    
+    <title>{title}</title>
+        <path id="B" fill="url(#gradient)" d="M325,75H275a25,25,0,0,0-25,25h0a25,25,0,0,0,25,25h15a10,10,0,0,1,10,10v75a15,15,0,0,1-15,15H150a25,25,0,0,0-25,25h0a25,25,0,0,0,25,25H285a15,15,0,0,1,15,15v75a10,10,0,0,1-10,10H150a25,25,0,0,0-25,25h0a25,25,0,0,0,25,25H325a25,25,0,0,0,25-25V100A25,25,0,0,0,325,75Z"/>
+        <circle id="B_dot" data-name="B dot" fill={sColor} cx="200" cy="100" r="25"/>
+        <circle id="C_dot" data-name="C dot" fill="#1EB1D2" cx="150" cy="325" r="25"/>
+        <path id="C" fill="#1EB1D2" d="M0,25V325a25,25,0,0,0,25,25H75a25,25,0,0,0,25-25h0a25,25,0,0,0-25-25H60a10,10,0,0,1-10-10V60A10,10,0,0,1,60,50H200a25,25,0,0,0,25-25h0A25,25,0,0,0,200,0H25A25,25,0,0,0,0,25Z"/>
+        <path id="B_second_part" data-name="B second part" fill={sColor} d="M350,250V400a25,25,0,0,1-25,25H150a25,25,0,0,1,0-50H290a10,10,0,0,0,10-10V290a15,15,0,0,0-15-15H150a25,25,0,0,1,0-50H325A25,25,0,0,1,350,250Z"/>
+</svg>

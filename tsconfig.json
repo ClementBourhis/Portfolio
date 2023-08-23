@@ -17,6 +17,7 @@
       "@images/*": ["src/assets/images/*"],
       "@projects/*": ["src/assets/projects/*"],
       "@cv/*": ["src/assets/cv/*"],
+      "@svg/*": ["src/components/svg/*"],
     },
   }
 }
