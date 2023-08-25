@@ -1,25 +1,23 @@
 ---
 import GitIcon from "@icons/github_icon.svg";
-import InIcon from "@icons/linkedin_icon.svg"
+import InIcon from "@icons/linkedin_icon.svg";
+
+//Props
+export interface Props {
+	className?: string;
+    height?: string;
+}
+
+const {className = "", height="50px"} = Astro.props;
 ---
 
-<div class="social-list">
-    <a href="https://github.com/ClementBourhis" target="_blank"><img src={GitIcon}/></a>
-    <a href="https://www.linkedin.com/in/clement-bourhis" target="_blank"><img src={InIcon}/></a>
-</div>
+<nav class={className}>
+    <a href="https://github.com/ClementBourhis" target="_blank"><img style={`height: ${height};`} src={GitIcon}/></a>
+    <a href="https://www.linkedin.com/in/clement-bourhis" target="_blank"><img style={`height: ${height};`} src={InIcon}/></a>
+</nav>
 
 <style>
-    .social-list{
-        height: 40px;
-    }
-
-    a {
-        height: 100%;
-        width: 100%;
-    }
-
     img {
-        width: 40px;
         transition: filter 0.2s ease;
     }
 
