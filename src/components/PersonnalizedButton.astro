@@ -1,0 +1,40 @@
+---
+interface Props {
+    className?: string;
+    title?: string;
+    goTo?: string;
+    isDownload?: boolean;
+    borderSize?: string;
+    borderColor?: string;
+    borderRadius?: string;
+}
+
+const { className="", title="Button", goTo="/", isDownload=false , borderSize="1px" , borderColor="linear-gradient(135deg, rgb(255, 255, 255) 20%, rgb(192, 240, 255) 35%, rgba(245,111,232,0) 60%)", borderRadius="35px"} = Astro.props;
+const Target = isDownload ? "_blank" : "_self";
+---
+
+<a class={className} style={`border-radius: ${borderRadius};`} href={goTo} target={Target}>
+    {title}
+    <p style={`padding: ${borderSize}; background: ${borderColor}; border-radius: ${borderRadius};`}></p>
+</a>
+
+<style>
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: #ebebeb;
+        cursor: pointer;
+    }
+
+    p {
+        position: absolute;
+        inset:0;
+        border-radius: 35px;
+        --grad: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+        -webkit-mask: var(--grad) content-box, var(--grad);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+    }
+</style>
