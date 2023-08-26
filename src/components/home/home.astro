@@ -2,12 +2,15 @@
 import CBPP from "@images/clement_bourhis_crystal.png";
 import CV from "@cv/Clement_BOURHIS_CV.pdf";
 
+import HomeBackground from "@svg/home_background.astro"
+
 import PersonnalizedButton from "@components/PersonnalizedButton.astro";
 import SocialList from "@components/SocialList.astro";
 ---
 
 <section id="home">
     <div id="presentation">
+        <HomeBackground className="home_background"/>
         <div id="img"><img src={CBPP} /></div>
         <div id="title">
             <h1>Ingénieur créatif Multimédia <br> Clément Bourhis</h1>
@@ -35,6 +38,14 @@ import SocialList from "@components/SocialList.astro";
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: calc(100% - var(--social-height)) max-content;
+        position: relative;
+    }
+
+    .home_background {
+        position: absolute;
+        max-height: 100%;
+        width: 100%;
+        z-index: -1;
     }
 
     h1 {
@@ -125,6 +136,7 @@ import SocialList from "@components/SocialList.astro";
             grid-template-columns: 1fr;
             grid-template-rows: calc(50% - var(--social-height) / 2) calc(50% - var(--social-height) / 2) max-content;
         }
+
 
         #img {
             justify-content: center;
