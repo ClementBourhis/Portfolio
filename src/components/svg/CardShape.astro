@@ -1,0 +1,60 @@
+---
+interface Props {
+    className?: string;
+    img: string;
+    title: string;
+}
+
+const {className="", img, title} = Astro.props;
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 552 402" class={className}>
+    <defs>
+        <style>
+            .cls-1,
+            .cls-2 {
+                fill: #242424;
+            }
+
+            .cls-1,
+            .cls-4 {
+                stroke: #1eb1d2;
+                stroke-miterlimit: 10;
+                stroke-width: 2px;
+            }
+
+            .cls-3 {
+                clip-path: url(#clip-path);
+            }
+
+            .cls-4 {
+                fill: none;
+            }
+
+            .cls-5 {
+                font-size: 24px;
+                fill: #ebebeb;
+                font-family: "Poppins Regular";
+            }
+        </style>
+        <clipPath id="clip-path">
+            <polygon id="Shape" class="cls-1" points="551 1 551 326 476 401 1 401 1 41 276.45 41 316.45 1 551 1" />
+        </clipPath>
+    </defs>
+    
+    <g id="Card">
+        <g id="Mask">
+            <polygon id="Shape-2" data-name="Shape" class="cls-2"
+                points="551 1 551 326 476 401 1 401 1 41 276.45 41 316.45 1 551 1" />
+            <g class="cls-3">
+                <image id="Image" width="551" height="401" transform="translate(0.5 0.5)"
+                    xlink:href={img} />
+            </g>
+            <polygon id="Shape-3" data-name="Shape" class="cls-4"
+                points="551 1 551 326 476 401 1 401 1 41 276.45 41 316.45 1 551 1" />
+        </g>
+        <text id="Titre" class="cls-5" transform="translate(1 22.11)">
+            {title}
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,98 @@
+---
+import CBLogoGrey from "@icons/cb_logo_grey.svg";
+import CardShape from "@svg/CardShape.astro";
+import CBLogo from "@icons/cb_logo.svg";
+
+interface Props {
+    className?: string;
+    project?: {
+        title: string;
+        description: string;
+        image: string;
+        miniature: string;
+        skills: string[];
+        tools: string[];
+        membership?: string;
+        date: string;
+    };
+}
+
+const {
+    className = "",
+    project = {
+        title: "Title not found",
+        description: "No description",
+        image: CBLogoGrey,
+        miniature: CBLogoGrey,
+        membership: CBLogo,
+        date: "06-05-2001",
+    }
+} = Astro.props;
+---
+
+<div class={`card ${className}`}>
+    <CardShape
+        className="shape"
+        title={project.title}
+        img={project.miniature}
+    />
+    <img src={project.membership} />
+    <ul class="skills">{project.skills.map((skill) => <li>{skill}</li>)}</ul>
+    <ul class="tools">{project.tools.map((tool) => <li>{tool}</li>)}</ul>
+</div>
+
+<script>
+    const card = document.querySelector('.card') as HTMLElement;
+    card?.style.setProperty('--card-size', card.scrollWidth + "px");
+    console.log(card);
+</script>
+
+<style>
+    .card {
+        --card-size: 0px;
+        aspect-ratio: 11/8;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .shape {
+        position: absolute;
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 10%;
+    }
+
+    .skills {
+        bottom: 4%;
+        left: 2%;
+    }
+
+    .tools {
+        top: 4%;
+        right: 2%;
+        direction: rtl;
+    }
+
+    ul {
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        position: absolute;
+        display: flex;
+    }
+
+    .card:hover ul, .card:focus ul {
+        opacity: 1;
+    }
+
+    li {
+        font-size: calc(var(--card-size) / 30);
+        margin: 0 2.5px 0 2.5px;
+        border-radius: 3px;
+        padding: 2px;
+        background-color: rgb(178, 71, 199);
+    }
+</style>
