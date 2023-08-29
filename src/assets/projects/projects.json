@@ -1,11 +1,11 @@
 {
     "projects": [
       {
-        "title": "2Gether Parallax",
-        "description": "Parallaxe réalisé pour le site de 2Gether",
+        "title": "2GETHER Parallax",
+        "description": "Parallaxe réalisé pour le site de 2GETHER",
         "image": "/src/assets/projects/2gether_parallax/parallax.svg",
         "miniature": "/src/assets/projects/2gether_parallax/parallax.svg",
-        "skills": ["Graphic Design", "Frontend"],
+        "skills": ["Graphisme", "Frontend"],
         "tools": ["Figma", "VSCode"],
         "date": "2023-08-14"
       },
