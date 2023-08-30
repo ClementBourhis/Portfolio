@@ -1,9 +1,12 @@
 ---
 import MailIcon from "@icons/mail_icon.svg"
 import InIcon from "@icons/linkedin_icon.svg"
+
+import ShortAboutTransitions from "@svg/short_about_transitions.astro";
 ---
 
 <div class="contact">
+    <ShortAboutTransitions className="transition"/>
     <div class="contact_formular">
         <div class="text">
             <h3>Me contacter</h3>
@@ -23,16 +26,17 @@ import InIcon from "@icons/linkedin_icon.svg"
 
 <style>
     .contact {
-        width: 100vw;
-        max-width: 1920px;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
+        padding-bottom: 10%;
+        background: linear-gradient(180deg, #0F103F 3.13%, #1A45DF 45.31%, #8161DE 98.96%);
+    }
+
+    .transition {
+        max-width: 100%;
+        height: fit-content;
     }
 
     .contact_formular {
+        margin: 10% auto 0 auto;
         width: 50%;
         border-radius: 30px;
         padding: 50px;

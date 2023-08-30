@@ -26,14 +26,20 @@ const { className="" } = Astro.props;
     .carrousel {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 5%;
     }
 
     .card {
         transition: transform 0.3s;
+        margin: 5%;
     }
 
     .card:hover {
         transform: translateY(-25px);
+    }
+
+    @media screen and (max-aspect-ratio: 1/1) {
+        .carrousel{
+            grid-template-columns: 1fr;
+        }
     }
 </style>
