@@ -7,6 +7,7 @@
         "miniature": "/src/assets/projects/2gether_parallax/parallax.svg",
         "skills": ["Graphisme", "Frontend"],
         "tools": ["Figma", "VSCode"],
+        "membership": "src/assets/projects/memberships/2gether_logo.png",
         "date": "2023-08-14"
       },
       {
@@ -16,6 +17,7 @@
         "miniature": "src/assets/projects/Le_Juno_Bar/sticker_bleu.png",
         "skills": ["Graphic Design", "Image de marque"],
         "tools": ["Illustrator"],
+        "membership": "src/assets/icons/cb_logo.svg",
         "date": "2022-10-15"
       },
       {
@@ -25,6 +27,7 @@
         "miniature": "src/assets/projects/Libize/libize-logo.svg",
         "skills": ["Web Design", "Graphic Design"],
         "tools": ["Illustrator", "Davinci Resolve"],
+        "membership": "src/assets/icons/cb_logo.svg",
         "date": "2023-08-06"
       }
     ]

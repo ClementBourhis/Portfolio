@@ -12,7 +12,7 @@ interface Props {
         miniature: string;
         skills: string[];
         tools: string[];
-        membership?: string;
+        membership: string;
         date: string;
     };
 }
@@ -30,7 +30,7 @@ const {
 } = Astro.props;
 ---
 
-<div class={`card ${className}`}>
+<a class={`card ${className}`} href={`/${project.title}`}>
     <CardShape
         className="shape"
         title={project.title}
@@ -39,12 +39,13 @@ const {
     <img src={project.membership} />
     <ul class="skills">{project.skills.map((skill) => <li>{skill}</li>)}</ul>
     <ul class="tools">{project.tools.map((tool) => <li>{tool}</li>)}</ul>
-</div>
+</a>
 
 <script>
-    const card = document.querySelector('.card') as HTMLElement;
-    card?.style.setProperty('--card-size', card.scrollWidth + "px");
-    console.log(card);
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(element => {
+        (element as HTMLElement).style.setProperty('--card-size', element.scrollWidth + "px");
+    })
 </script>
 
 <style>
@@ -94,5 +95,9 @@ const {
         border-radius: 3px;
         padding: 2px;
         background-color: rgb(178, 71, 199);
+    }
+
+    .skills li {
+        background-color: rgb(70, 158, 173);
     }
 </style>

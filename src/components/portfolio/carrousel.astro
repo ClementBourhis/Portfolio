@@ -1,0 +1,39 @@
+---
+import Card from "./card.astro";
+import projectsData from "@projects/projects.json";
+
+const projects = projectsData.projects.sort((a,b) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+
+    return dateB - dateA;
+});
+
+interface Props {
+    className?: string;
+}
+
+const { className="" } = Astro.props;
+---
+
+<div class={`carrousel ${className}`}>
+    <Card project={projects[0]} className="card"/>
+    <Card project={projects[1]} className="card"/>
+    <Card project={projects[2]} className="card"/>
+</div>
+
+<style>
+    .carrousel {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5%;
+    }
+
+    .card {
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-25px);
+    }
+</style>

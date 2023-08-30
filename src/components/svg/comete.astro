@@ -1,0 +1,22 @@
+---
+//Props
+export interface Props {
+	className?: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<svg width="244" height="40" viewBox="0 0 244 40" fill="none" xmlns="http://www.w3.org/2000/svg" class={className}>
+    <path d="M27.7913 10.151L36.8787 19.2384L27.2709 28.8462L2.13175 19.7672L27.7913 10.151Z" stroke="#EBEBEB"
+        stroke-width="3" />
+    <path d="M50 19L243 19" stroke="url(#paint0_linear_140_153)" stroke-linecap="round" />
+    <defs>
+        <linearGradient id="paint0_linear_140_153" x1="50" y1="18.4718" x2="261.851" y2="21.0397"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="white" />
+            <stop offset="0.0260417" stop-color="#44A5FF" />
+            <stop offset="1" stop-color="#0029FF" stop-opacity="0" />
+        </linearGradient>
+    </defs>
+</svg>
