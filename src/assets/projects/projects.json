@@ -1,11 +1,11 @@
 {
     "projects": [
       {
-        "title": "2GETHER Parallax",
+        "title": "Parallaxe de 2GETHER",
         "description": "Parallaxe réalisé pour le site de 2GETHER",
         "image": "/src/assets/projects/2gether_parallax/parallax.svg",
-        "miniature": "/src/assets/projects/2gether_parallax/parallax.svg",
-        "skills": ["Graphisme", "Frontend"],
+        "miniature": "/src/assets/projects/2gether_parallax/miniature.svg",
+        "skills": ["Illustration", "Frontend"],
         "tools": ["Figma", "VSCode"],
         "membership": "src/assets/projects/memberships/2gether_logo.png",
         "date": "2023-08-14"
@@ -24,10 +24,10 @@
         "title": "Libize",
         "description": "Réalisation de la communcation de Libize",
         "image": "src/assets/projects/Libize/libize-logo.svg",
-        "miniature": "src/assets/projects/Libize/libize-logo.svg",
-        "skills": ["Web Design", "Graphic Design"],
-        "tools": ["Illustrator", "Davinci Resolve"],
-        "membership": "src/assets/icons/cb_logo.svg",
+        "miniature": "src/assets/projects/Libize/miniature.jpg",
+        "skills": ["Webdesign", "Graphisme", "Communication digital"],
+        "tools": ["Illustrator", "Figma"],
+        "membership": "src/assets/projects/memberships/libize_logo.png",
         "date": "2023-08-06"
       }
     ]
