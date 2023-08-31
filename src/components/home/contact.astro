@@ -2,32 +2,40 @@
 import MailIcon from "@icons/mail_icon.svg"
 import InIcon from "@icons/linkedin_icon.svg"
 
+import PersonnalizedButton from "@components/PersonnalizedButton.astro";
 import ShortAboutTransitions from "@svg/short_about_transitions.astro";
 ---
 
-<div class="contact">
+<section id="contact">
     <ShortAboutTransitions className="transition"/>
+
     <div class="contact_formular">
-        <div class="text">
-            <h3>Me contacter</h3>
-            <p class="text_content">Contactez moi facilement avec mon adresse email. Je suis ouvert à toutes demandes. N'hésitez pas également à me suivre sur les réseaux sociaux pour me contacter.</p>
+        <h2>Me contacter</h2>
+        <p class="text_content">Contactez moi facilement avec mon adresse email. Je suis ouvert à toutes demandes. N'hésitez pas également à me suivre sur les réseaux sociaux pour me contacter.</p>
+       <div class="contact_content">
             <div class="social">
                 <img src={MailIcon}/>
                 <p>bourhis.clement29@gmail.com</p> 
-                <a class="send" href="mailto:bourhis.clement29@gmail.com?subject=Prise%20de%20contact">Envoyer un e-mail</a>
+                <PersonnalizedButton title="Envoyer un e-mail" goTo="mailto:bourhis.clement29@gmail.com?subject=Prise%20de%20contact" className="send"/>
             </div>
             <div class="social">
                 <img src={InIcon}/>
                 <p><a href="https://www.linkedin.com/in/clement-bourhis" target="_blank">@clement-bourhis</a></p>
             </div>
-        </div>
+       </div>
     </div>
-</div>
+</section>
 
 <style>
-    .contact {
-        padding-bottom: 10%;
+
+    #contact {
         background: linear-gradient(180deg, #0F103F 3.13%, #1A45DF 45.31%, #8161DE 98.96%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+        position: relative;
     }
 
     .transition {
@@ -36,89 +44,60 @@ import ShortAboutTransitions from "@svg/short_about_transitions.astro";
     }
 
     .contact_formular {
-        margin: 10% auto 0 auto;
-        width: 50%;
-        border-radius: 30px;
-        padding: 50px;
-        background: rgba(47, 47, 138, 0.6);
+        width: fit-content;
+        background-color: #141414d9;
+        border: 2px solid #1EB1D2;
+        margin: 5vh;
+        padding: 15px;
     }
 
-    h3 {
-        margin-bottom: 20px;
+    h2 {
+        margin-bottom: 15px;
     }
 
-    .text_content {
-        width: 60%;
+    .contact_content {
+        margin-top: 30px;
     }
 
     .social {
+        margin: 15px;
         display: flex;
         align-items: center;
-        margin-top: 20px;
     }
 
-    img {
-        width: 40px;
+    .social img {
+        width: 50px;
     }
 
     .social p {
-        margin: 0 20px 0 20px;
+        margin: 15px;
     }
+
+    .social p a:hover {
+        color: #1EB1D2;
+    } 
 
     .send {
         padding: 10px;
         background: linear-gradient(151deg, #6993FF 15%, #af36ff 95%);
-        cursor: pointer;
-        border: inherit;
-        display: flex;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Poppins Regular';
-        font-size: 10px;
-        color: white;
-        border-radius: 35px;
-        background-color: rgba(124, 124, 124, 1);
-    }
-
-    .send::before {
-        content:"";
-        position:absolute;
-        inset:0;
-        padding: 1px;
-        border-radius: 35px;
-        background: linear-gradient(135deg, rgb(255, 255, 255) 20%, rgb(192, 240, 255) 35%, rgba(245,111,232,0) 60%);
-        --grad: linear-gradient(red, red);
-        -webkit-mask: var(--grad) content-box, var(--grad);
-        -webkit-mask-composite: destination-out;
-        mask-composite: exclude;
-    }
-
-    a {
         transition: color 0.2s ease-in-out;
     }
 
-    a:hover {
-        color:black;
+    .send:hover {
+        color: black;
     }
 
     @media screen and (max-width: 1000px) {
-        h3 {
-            text-align: center;
-        }
 
-        .text_content {
-            width: 100%;
+    }
+
+    @media screen and (max-aspect-ratio: 1/1) {
+        .contact_formular {
             text-align: center;
         }
 
         .social {
             flex-direction: column;
-            margin: 30px 0 30px 0;
-        }
-
-        .social p {
-            margin: 10px;
         }
     }
 </style>
