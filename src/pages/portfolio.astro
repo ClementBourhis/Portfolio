@@ -1,18 +1,13 @@
 ---
 //Importation des dépendences du site
-import Header from '@layouts/Header.astro';
+import DefaultLayout from '@layouts/DefaultLayout.astro';
 
 //Éléments de pages
-import Banner from '@components/Banner.astro';
 import RecentWork from '@components/home/recentWork.astro';
 import Gallery from '@components/portfolio/gallery.astro';
-import Footer from '@components/Footer.astro';
 ---
 
-<html lang="fr">
-    <Header title="Portfolio"/>
-    <Banner />
+<DefaultLayout title='Portfolio'>
     <RecentWork />
     <Gallery />
-    <Footer />
-</html>
+</DefaultLayout>
