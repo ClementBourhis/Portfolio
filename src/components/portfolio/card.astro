@@ -7,13 +7,10 @@ interface Props {
     className?: string;
     project?: {
         title: string;
-        description: string;
-        image: string;
         miniature: string;
         skills: string[];
         tools: string[];
         membership: string;
-        date: string;
     };
 }
 
@@ -21,11 +18,9 @@ const {
     className = "",
     project = {
         title: "Title not found",
-        description: "No description",
         image: CBLogoGrey,
         miniature: CBLogoGrey,
         membership: CBLogo,
-        date: "06-05-2001",
     }
 } = Astro.props;
 ---
