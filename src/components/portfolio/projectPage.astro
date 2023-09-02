@@ -1,22 +1,23 @@
 ---
-import BackIcon from "@icons/back_icon.svg"
-
 interface Props {
     project: {
-    title: string;
-    description: string;
-    image: string;
-    miniature: string;
-    skills: string[];
-    tools: string[];
-    date: string;
+        title: string;
+        description: string;
+        ressource: string;
+        skills: string[];
+        tools: string[];
+        type: string;
+        date: string;
     };
 }
 
-const {project} = Astro.props;
+const { project } = Astro.props;
 ---
 
 <div class="project-page">
+    <h1>{project.title}</h1>
+
+    <!--
     <div class="project">
         <div class="title">
             <button class="back" onclick="window.location.href='/portfolio';"><img src={BackIcon}></button>
@@ -42,9 +43,17 @@ const {project} = Astro.props;
             </div>
         </div>
     </div>
-</div>
+-->
 
-<style>
+    <style>
+        .project-page {
+            padding: 5vh 5% 5vh 5%;
+        }
+
+        h1 {
+        }
+
+        /*
     .project-page{
         width: 100vw;
         max-width: 1920px;
@@ -176,4 +185,6 @@ const {project} = Astro.props;
             grid-template-columns: 1fr;
         }
     }
-</style>
+    */
+    </style>
+</div>
