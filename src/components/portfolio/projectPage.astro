@@ -1,4 +1,7 @@
 ---
+import TypeImage from "@components/portfolio/TypeRessource/TypeImage.astro";
+import TypeVideo from "@components/portfolio/TypeRessource/TypeVideo.astro";
+
 interface Props {
     project: {
         title: string;
@@ -12,10 +15,16 @@ interface Props {
 }
 
 const { project } = Astro.props;
+
+const selectedType = "Type" + project.type;
 ---
 
-<div class="project-page">
+<div id="project-page">
     <h1>{project.title}</h1>
+    <div id="ressource_content">
+        {selectedType === "TypeImage" && <TypeImage ressource={project.ressource}/>}
+        {selectedType === "TypeVideo" && <TypeVideo />}
+    </div>
 
     <!--
     <div class="project">
@@ -44,16 +53,17 @@ const { project } = Astro.props;
         </div>
     </div>
 -->
+</div>
 
-    <style>
-        .project-page {
-            padding: 5vh 5% 5vh 5%;
-        }
+<style>
+    #project-page {
+        padding: 5vh 5% 5vh 5%;
+    }
 
-        h1 {
-        }
+    h1 {
+    }
 
-        /*
+    /*
     .project-page{
         width: 100vw;
         max-width: 1920px;
@@ -186,5 +196,4 @@ const { project } = Astro.props;
         }
     }
     */
-    </style>
-</div>
+</style>

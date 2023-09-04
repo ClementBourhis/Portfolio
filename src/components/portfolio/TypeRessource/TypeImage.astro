@@ -1,0 +1,16 @@
+---
+interface Props {
+    className?: string;
+    ressource?: string;
+}
+
+const { className="", ressource="src/assets/icons/cb_logo_grey.svg"} = Astro.props;
+---
+
+<img src={ressource} class={className}/>
+
+<style>
+    img {
+        max-width:100%
+    }
+</style>
