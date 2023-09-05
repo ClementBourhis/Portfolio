@@ -65,12 +65,15 @@ const {
     .skills {
         bottom: 4%;
         left: 2%;
+        flex-wrap: wrap-reverse;
+        max-width: 85%;
     }
 
     .tools {
         top: 4%;
         right: 2%;
         direction: rtl;
+        max-width: 45%;
     }
 
     ul {
@@ -78,6 +81,7 @@ const {
         transition: opacity 0.2s ease-in-out;
         position: absolute;
         display: flex;
+        flex-wrap: wrap;
     }
 
     .card:hover ul, .card:focus ul {
@@ -86,7 +90,7 @@ const {
 
     li {
         font-size: calc(var(--card-size) / 30);
-        margin: 0 2.5px 0 2.5px;
+        margin: 2.5px;
         border-radius: 3px;
         padding: 2px;
         background-color: rgb(178, 71, 199);
