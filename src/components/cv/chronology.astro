@@ -61,6 +61,10 @@ const older = events.slice(1)
         scrollbar-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
     }
 
+    .events::-webkit-scrollbar {
+        display: none;
+    }
+
     .event {
         display: grid;
         grid-template-columns: 1fr 75px 1fr;
@@ -76,7 +80,7 @@ const older = events.slice(1)
         background: rgb(231, 231, 231);
         position: absolute;
         bottom: -100px;
-        right: 50%;
+        right: calc(50% - 1px);
     }
 
     .hilight {
