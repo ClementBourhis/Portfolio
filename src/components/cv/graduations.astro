@@ -27,34 +27,24 @@ import KBTIcon from "@cv/images/kbt_icon.png"
 
 <style>
     #graduations {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100vw;
+        max-height: 100vh;
         max-width: 1920px;
         margin: auto;
-        overflow: hidden;
     }
 
     h1 {
-        margin-left: 50px;
+        margin-left: 10px;
         position: relative;
         font-family: "Poppins Bold";
+        font-size: min(7vw,32px);
     }
 
-    h1::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: -5px;
-        left: 0;
-        background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(51, 178, 216) 5%, rgba(245,111,232,0) 70%);
-        transform-origin: bottom;
+    h2 {
+        font-size: min(3vw,24px);
     }
 
     .grid {
+        margin: 10%;
         display: grid;
         height: 80%;
         grid-template-columns: 1fr 1fr 1fr;
@@ -71,22 +61,7 @@ import KBTIcon from "@cv/images/kbt_icon.png"
         margin: 15px;
         border-radius: 500px;
         border: white solid 5px;
-        width: 100%;
+        width: 80%;
         max-width: 200px;
-    }
-
-    @media screen and (max-width: 1000px) {
-        .grid {
-            gap: 10px;
-        }
-
-        img {
-            width: 80%;
-            border: white solid 2px;
-        }
-
-        h2 {
-            font-size: 3vw;
-        }
     }
 </style>

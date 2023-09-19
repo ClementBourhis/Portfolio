@@ -27,6 +27,7 @@ const older = events.slice(1)
             <div class="separator"></div>
         ))}
     </div>
+    <p class="control">[shift] + [molette] pour défiler</p>
     <ShortAboutTransitions className="transition transition_reverse"/>
 </section>
 
@@ -104,5 +105,18 @@ const older = events.slice(1)
 
     .transition_reverse {
         transform: rotate(180deg);
+    }
+
+    .control {
+        position: absolute;
+        right: 10px;
+        bottom: 2%;
+        font-size: min(2vw, 12px);
+    }
+
+    @media only screen and (hover: none) and (pointer: coarse){
+        .control {
+            display: none;
+        }
     }
 </style>
