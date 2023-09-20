@@ -1,19 +1,198 @@
 ---
 
+import PSIcon from "@icons/photoshop_icon.svg";
+import AEIcon from "@icons/aftereffect_icon.svg";
+import IAIcon from "@icons/illustrator_icon.svg";
+import PRIcon from "@icons/premierepro_icon.svg";
+import DavinciIcon from "@icons/davinci_icon.svg";
+import BlenderIcon from "@icons/blender_icon.svg";
+import KritaIcon from "@icons/krita_icon.svg";
+import GimpIcon from "@icons/gimp_icon.svg";
+import OBSIcon from "@icons/obs_icon.svg";
+import MAGIXIcon from "@icons/magix_icon.svg";
+import PTIcon from "@icons/protools_icon.svg";
+import OfficeIcon from "@icons/office_icon.svg";
+
 ---
 
 
-<div id="skills">
+<section id="skills">
     <div class="competences">
         <h1>Compétences</h1>
-        <div class="grid">
+        <div class="skills">
+            <div class="digital">
+                <h2>Informatique</h2>
+                
+                <h3>Langages</h3>
+                <p>HTML / CSS / PHP / JavaScript / C / C++ / SQL / Python / Bash / OpenGL / SDL / Java</p>
+                
+                <h3>Outils</h3>
+                <p>Visual Studio Code / MySQL / Postman / XAMPP - WAMP / GIT / Vue.js / Astro.js</p>
 
+                <h3>Systèmes</h3>
+                <p>Windows / Linux / iOS</p>
+
+                <h3>Réseaux</h3>
+                <p>IPV4 / IPV6 / VPN / VLAN / BGP / OSPF / MPLS / DNS / DHCP / NAT / LDAP / Apache / Connexion cuivre et fibre / WiFi</p>
+            </div>
+            <div class="artistic">
+                <h2>Artistique</h2>
+
+                <h3>Équipements</h3>
+                <p>Caméra GH5 Lumix / Enregistreur son portable / Perche son / Tablette graphique XP-Pen 15.6 Pro</p>
+
+                <h3>Pratiques</h3>
+                <p>Dessin / Photographie / Montage / Illustration / Imagerie / Modelisation 3D / Composition sonore / Animation 2D / Animation 3D / Motion Design / Maquettage</p>
+                
+                <h3>Démarches</h3>
+                <p>Observation / Moodboard / Storyboard / Écriture / Analyse</p>
+
+                <h3>Outils</h3>
+                <p>Figma / Notion / Dribble / ArtStation / Canva</p>
+            </div>
         </div>
     </div>
     <div class="softwares">
         <h1>Logiciels</h1>
-        <div class="grid">
+        <div class="logiciel">
+            <div class="software">
+                <img src={PSIcon}>
+                <p>Photoshop</p>
+            </div>
 
+            <div class="software">
+                <img src={AEIcon}>
+                <p>After Effect</p>
+            </div>
+
+            <div class="software">
+                <img src={IAIcon}>
+                <p>Illustrator</p>
+            </div>
+
+            <div class="software">
+                <img src={PRIcon}>
+                <p>Premiere Pro</p>
+            </div>
+
+            <div class="software">
+                <img src={DavinciIcon}>
+                <p>Davinci Resolve</p>
+            </div>
+
+            <div class="software">
+                <img src={BlenderIcon}>
+                <p>Blender</p>
+            </div>
+
+            <div class="software">
+                <img src={KritaIcon}>
+                <p>Krita</p>
+            </div>
+
+            <div class="software">
+                <img src={GimpIcon}>
+                <p>GIMP</p>
+            </div>
+
+            <div class="software">
+                <img src={OBSIcon}>
+                <p>OBS Studio</p>
+            </div>
+
+            <div class="software">
+                <img src={MAGIXIcon}>
+                <p>MAGIX video</p>
+            </div>
+
+            <div class="software">
+                <img src={PTIcon}>
+                <p>Pro Tools</p>
+            </div>
+
+            <div class="software">
+                <img src={OfficeIcon}>
+                <p>Licences Office</p>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+
+<style>
+    #skills {
+        padding: 5%;
+    }
+
+    .competences {
+        max-width: 1920px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: min(7vw,32px);
+        font-family: 'Poppins Bold';
+        margin-bottom: 35px
+    }
+
+    h2 {
+        font-size: min(5vw,24px);
+    }
+
+    h3 {
+        font-size: min(3vw, 18px);
+    }
+
+    p {
+        font-size: min(2vw,16px);
+    }
+    
+    .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+
+    .skills div {
+        padding: 10px;
+        border-radius: 15px;
+        border: solid #216474 2px;
+    }
+
+    .skills h2, .skills p {
+        margin-bottom: 20px;
+    }
+
+    .skills h3 {
+        margin-bottom: 5px;
+    }
+
+    .logiciel {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .software {
+        margin: 2%;
+        display: flex;
+        align-items: center;
+    }
+
+    .software img {
+        margin-right: 5px;
+        height: 70%;
+        max-height: 40px;
+    }
+
+
+    @media screen and (max-aspect-ratio: 1/1) {
+        .skills {
+            grid-template-columns: 1fr;
+        }
+
+        .logiciel {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+</style>
