@@ -1,0 +1,77 @@
+---
+import ENESSIcon from "@cv/images/eness_icon.png"
+import BILIcon from "@cv/images/bil_icon.png"
+import ALTRANIcon from "@cv/images/altran_icon.png"
+
+---
+
+<div id="experiences">
+    <h1>Expriences Profesionnelles</h1>
+    <div class="grid">
+        <div class="experience eness">
+            <h2>E-Ness</h2>
+            <img src={ENESSIcon} />
+            <p>Community Manager</p>
+            <p>2023 - 6 mois</p>
+        </div>
+
+        <div class="experience bil">
+            <h2>B.I.L. Horizons</h2>
+            <img src={BILIcon} />
+            <p>Designer graphique</p>
+            <p>2022 - 2 mois</p>
+        </div>
+
+        <div class="experience kbt">
+            <h2>Altran</h2>
+            <img src={ALTRANIcon} />
+            <p>S.A.V sur les réseaux Orange</p>
+            <p>2019 - 1 an</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    #experiences {
+        max-height: 100vh;
+        max-width: 1920px;
+        margin: auto;
+    }
+
+    h1 {
+        margin-left: 10px;
+        position: relative;
+        font-family: "Poppins Bold";
+        font-size: min(7vw,32px);
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: min(3vw,24px);
+    }
+
+    .grid {
+        margin: 10%;
+        display: grid;
+        height: 80%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .experience {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        margin: 15px;
+        border-radius: 500px;
+        border: #8b8b8b solid 5px;
+        width: 80%;
+        max-width: 200px;
+    }
+</style>
