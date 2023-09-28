@@ -7,10 +7,17 @@ interface Props {
 const { className="", ressource="src/assets/icons/cb_logo_grey.svg"} = Astro.props;
 ---
 
-<img src={ressource} class={className}/>
+<div class="img-content">
+    <img src={ressource} class={className}/>
+</div>
 
 <style>
+    .img-content {
+        display: flex;
+        justify-content: center;
+    }
+
     img {
-        max-width:100%;
+        height: 100%;
     }
 </style>

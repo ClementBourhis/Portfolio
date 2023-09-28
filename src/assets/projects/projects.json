@@ -2,7 +2,8 @@
     "projects": [
       {
         "title": "Parallaxe de 2GETHER",
-        "description": "Parallaxe réalisé pour le site de 2GETHER",
+        "description": "Parallaxe réalisé pour le site de l'association 2GETHER. Ce parallaxe a été réalisé sous Figma et retravaillé directement sous Visual Studio Code pour apporté des effets et des animations.",
+        "link": "https://www.2gether-asso.fr",
         "ressource": "/src/assets/projects/2gether_parallax/parallax.svg",
         "miniature": "/src/assets/projects/2gether_parallax/miniature.svg",
         "skills": ["Illustration", "Frontend"],
@@ -13,25 +14,39 @@
       },
       {
         "title": "Le Juno Bar",
-        "description": "Création de la charte graphique du bar Le Juno à Montpellier",
-        "ressource": "src/assets/projects/Le_Juno_Bar/sticker_bleu.png",
-        "miniature": "src/assets/projects/Le_Juno_Bar/sticker_bleu.png",
+        "description": "J'ai été engager pour réaliser la charte graphique du bar JUNO à Montpelier. L'objectif était de créer une identité visuelle forte et efficace pour un concepte de bar musical où des groupes de musique peuvent jouer.",
+        "link": "https://www.instagram.com/juno.bar.mtp/",
+        "ressource": "src/assets/projects/Le_Juno_Bar/juno_projets.png",
+        "miniature": "src/assets/projects/Le_Juno_Bar/miniature.png",
         "skills": ["Graphic Design", "Image de marque"],
         "tools": ["Illustrator"],
-        "membership": "src/assets/icons/cb_logo.svg",
+        "membership": "src/assets/projects/memberships/juno_logo.png",
         "type": "Image",
         "date": "2022-10-15"
       },
       {
         "title": "Libize",
-        "description": "Réalisation de la communcation de Libize",
-        "ressource": "src/assets/projects/Libize/libize-logo.svg",
+        "description": "Dans le cadre de ma formation au diplômpe d'ingénieur IMAC, j'ai participé au développement de l'image de marque du logiciel Libize et de ça communication visuelle et digital. J'ai mis à contribution mes compétences en illustration, montage, marketing ou encore webdesign afin de promouvoir au mieux le logiciel",
+        "link": "https://libize.com",
+        "ressource": "src/assets/projects/Libize/libize_projets.png",
         "miniature": "src/assets/projects/Libize/miniature.jpg",
+        "skills": ["Webdesign", "Graphisme", "Communication digital", "Image de marque"],
+        "tools": ["Illustrator", "Figma", "Davinci Resolve"],
+        "membership": "src/assets/projects/memberships/libize_logo.png",
+        "type": "Image",
+        "date": "2023-08-06"
+      },
+      {
+        "title": "BIL",
+        "description": "Réalisation de la communcation de",
+        "link": "",
+        "ressource": "src/assets/projects/BIL/Logo - BIL Horizons.png",
+        "miniature": "src/assets/projects/BIL/Logo - BIL Horizons.png",
         "skills": ["Webdesign", "Graphisme", "Communication digital"],
         "tools": ["Illustrator", "Figma"],
         "membership": "src/assets/projects/memberships/libize_logo.png",
         "type": "Image",
-        "date": "2023-08-06"
+        "date": "2022-09-04"
       }
     ]
   }
