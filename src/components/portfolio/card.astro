@@ -2,6 +2,7 @@
 import CBLogoGrey from "@icons/cb_logo_grey.svg";
 import CardShape from "@svg/CardShape.astro";
 import CBLogo from "@icons/cb_logo.svg";
+import membershipsData from "@projects/memberships/membership.json";
 
 interface Props {
     className?: string;
@@ -23,6 +24,16 @@ const {
         membership: CBLogo,
     }
 } = Astro.props;
+
+const memberships = membershipsData.memberships
+let membership = CBLogo;
+
+for (let i = 0; i < memberships.length; i++) {
+    if (memberships[i].name === project.membership) {
+        membership = memberships[i].logo;
+        break; // Sortir de la boucle une fois la donnée trouvée
+    }
+}
 ---
 
 <a class={`card ${className}`} href={`/${project.title}`}>
@@ -31,7 +42,7 @@ const {
         title={project.title}
         img={project.miniature}
     />
-    <img src={project.membership} />
+    <img src={membership} />
     <ul class="skills">{project.skills.map((skill) => <li>{skill}</li>)}</ul>
     <ul class="tools">{project.tools.map((tool) => <li>{tool}</li>)}</ul>
 </a>

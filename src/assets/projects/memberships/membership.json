@@ -1,0 +1,28 @@
+{
+    "memberships": [
+      {
+        "name": "CB",
+        "logo": "src/assets/icons/cb_logo.svg"
+      },
+      {
+        "name": "2GETHER",
+        "logo": "src/assets/projects/memberships/2gether_logo.png"
+      },
+      {
+        "name": "B.I.L.",
+        "logo": "src/assets/projects/memberships/bil_logo.png"
+      },
+      {
+        "name": "JUNO",
+        "logo": "src/assets/projects/memberships/juno_logo.png"
+      },
+      {
+        "name": "UQO",
+        "logo": "src/assets/projects/memberships/uqo_logo.png"
+      },
+      {
+        "name": "LIBIZE",
+        "logo": "src/assets/projects/memberships/libize_logo.png"
+      }
+    ]
+}
