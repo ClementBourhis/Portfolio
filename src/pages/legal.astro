@@ -1,0 +1,42 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title='Mentions Légales'>
+    <section class="clauses">
+        <h1>Éditeur du site :</h1>
+        <p>Clément Bourhis</p>
+        
+        <h1>Responsable de la publication :</h1>
+        <p>Clément Bourhis</p>
+
+        <h1>Propriété intellectuelle :</h1>
+        <p>Tous les contenus présents sur ce site (textes, images, vidéos, etc.) sont protégés par le droit d'auteur et sont la propriété de Clément Bourhis.</p>
+
+        <h1>Clause de non-responsabilité :</h1>
+        <p>Ce site web peut contenir des liens vers d'autres sites web qui ne sont pas sous notre contrôle. Nous n'assumons aucune responsabilité pour le contenu de ces sites externes. Les liens sont fournis uniquement à des fins d'information et de commodité, et leur inclusion sur ce site ne signifie pas que nous les approuvons. Si vous accédez à ces sites externes, vous le faites à vos propres risques.</p>
+
+        <h1>Droit applicable et juridiction compétente :</h1>
+        <p>Ce site web est régi par la loi française. Tout litige découlant de son utilisation sera soumis à la juridiction exclusive des tribunaux français.</p>
+    </section>
+</DefaultLayout>
+
+<style>
+    .clauses {
+        max-width: 1000px;
+        min-height: calc(100vh - 133px);
+        padding: 10px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .clauses h1 {
+        margin: 10px 0 10px 0;
+    }
+
+    .clauses p {
+        margin-bottom: 50px;
+    }
+</style>
