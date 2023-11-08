@@ -5,6 +5,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
-  site: 'https://clementbourhis.github.io',
-  base: '/Portfolio'
+  site: 'https://clementbourhis.fr',
+  base: '/Webcv'
 });
